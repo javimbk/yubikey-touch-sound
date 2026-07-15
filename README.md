@@ -94,7 +94,7 @@ Remove everything:
 **Is it running?**
 
 ```sh
-launchctl print "gui/$(id -u)/com.$(whoami).yubikey-touch-sound" | grep state
+launchctl print "gui/$(id -u)/com.$(whoami).yubikey-touch-sound" | grep -m1 "state ="
 ```
 
 **Errors?** Check `~/Library/Logs/yubikey-touch-sound.log` (the previous session's log is kept at `.log.old`). It records every state transition (`FIDO2 touch wait started/ended`, `OpenPGP touch wait started`), so you can see exactly what the script detected and when.
