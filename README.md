@@ -50,6 +50,7 @@ Trigger anything that makes the key blink, e.g. an SSH operation with your YubiK
 
 ```sh
 ssh -T git@github.com
+git clone <repo-that-needs-yk-permission>
 ```
 
 You should hear pings until you touch the key.
